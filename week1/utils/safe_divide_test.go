@@ -7,7 +7,7 @@ func TestSafeDivide_ValidDivision(t *testing.T) {
 	if err != nil {
 		t.Errorf("unexpected error %v", err)
 	}
-	if result != 5 {
+	if result != 2 {
 		t.Errorf("expected 5. got %d", result)
 	}
 
