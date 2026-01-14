@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"January/week1/utils"
+	"fmt"
+)
 
 func main() {
-	fmt.Println(10)
+
+	result, err := utils.SafeDivide(10, -1)
+
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	fmt.Println("result:", result)
 }
