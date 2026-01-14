@@ -17,7 +17,7 @@ func TestSafeDivide_ZeroNumerator(t *testing.T) {
 	result, err := SafeDivide(10, 0)
 
 	if err != nil {
-		t.Error("unexpected result %v", err)
+		t.Errorf("unexpected result %v", err)
 	}
 	if result != 0 {
 		t.Fatalf("expected 0, got %d", result)
