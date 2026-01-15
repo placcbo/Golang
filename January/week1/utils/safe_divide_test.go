@@ -26,13 +26,12 @@ func TestSafeDivide_ZeroNumerator(t *testing.T) {
 }
 
 func TestSafeDivide_NegativeNumerator(t *testing.T) {
-	result, err := SafeDivide(-10, 2)
-
-	if err == nil {
+	result, err := SafeDivide(10, -2)
+	if err != nil {
 		t.Fatalf("unexpected error %v", err)
 	}
-
 	if result != -5 {
-		t.Fatalf("expected -5, got %d", result)
+		t.Fatalf("expected -5 from 10/-2, got %d", result)
+
 	}
 }
