@@ -1,3 +1,3 @@
-module work_reservation
+module PBR
 
 go 1.25.4

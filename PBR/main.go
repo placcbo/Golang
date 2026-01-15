@@ -1,8 +1,8 @@
 package main
 
 import (
+	"PBR/utils"
 	"fmt"
-	"work_reservation/utils"
 )
 
 func main() {
