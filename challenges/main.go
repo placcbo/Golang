@@ -14,5 +14,13 @@ func main() {
 	fmt.Println(result, err)
 
 	sum, product := utils.Stats(3, 4)
-	fmt.Printf("sum: %v, product: %v /n", sum, product)
+	fmt.Printf("sum: %v, product: %v\n", sum, product)
+
+	value1 := Price("kamau")
+	fmt.Println(value1)
+}
+
+func Price(name string) string {
+	return "hello " + name
+
 }
