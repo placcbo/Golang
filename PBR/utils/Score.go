@@ -20,16 +20,17 @@ func Score(Tpt int, Accuracy float64) (int, error) {
 	}
 
 	var finalScore int
+	//score 1
 
 	if Tpt < 55 || Accuracy < 85 {
 		finalScore = 1
-	} else if (Tpt >= 55 && Tpt <= 67 && Accuracy >= 85) || (Tpt >= 55 && Accuracy >= 85 && Accuracy < 90) {
+	}
+	if (Tpt >= 55 && Tpt <= 67 && Accuracy >= 85) || (Tpt >= 55 && Accuracy >= 85 && Accuracy < 90) {
 		finalScore = 2
-	} else if Tpt >= 67 && Tpt <= 100 && Accuracy >= 95 && Accuracy <= 100 {
+	}
+	if Tpt >= 67 && Tpt <= 100 && Accuracy >= 95 && Accuracy <= 100 {
 		finalScore = 3
 
-	} else {
-		finalScore = 1
 	}
 
 	return finalScore, nil

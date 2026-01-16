@@ -19,4 +19,5 @@ func main() {
 	workerScore, err := utils.Score(totaWorkerlTpt, workerAverageAccuracy)
 
 	fmt.Println(workerScore, nil)
+
 }
