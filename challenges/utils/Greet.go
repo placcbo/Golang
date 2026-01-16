@@ -14,7 +14,7 @@ func Greet(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("empty string")
 	}
-	greeting := "hello" + name
+	greeting := "hello " + name
 
 	return greeting, nil
 }

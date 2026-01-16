@@ -21,7 +21,7 @@ func TestGreet_EmptyInput(t *testing.T) {
 	}
 
 	if greeting != "" {
-		t.Fatalf("Empty Input %v", greeting)
+		t.Fatalf("expected empty string but got %v", greeting)
 	}
 
 }
