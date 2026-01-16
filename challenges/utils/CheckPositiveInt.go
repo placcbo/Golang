@@ -7,5 +7,5 @@ func CheckPositiveInt(number int) (bool, error) {
 		return false, errors.New("number is Negative")
 	}
 
-	return true, nil
+	return number > 0, nil
 }
