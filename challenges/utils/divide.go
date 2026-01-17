@@ -4,18 +4,12 @@ import "errors"
 
 func SafeDivide(a, b int) (int, error) {
 	if b == 0 {
-		return 0, errors.New("denominator cannot be zero")
+		return 0, errors.New("division by zero")
 	}
-	return (a / b), nil
+
+	return a / b, nil
+
 }
-
-// 🔥 Exercise 4 — Divide Function with Error
-
-// Task:
-
-// Write a Go function:
-
-// func SafeDivide(a, b int) (int, error)
 
 // Requirements:
 

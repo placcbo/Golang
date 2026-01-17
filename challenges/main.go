@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	result, err := utils.ParseAge("abc")
-	fmt.Println(result, err)
+	result, err := utils.SafeDivide(10, 4)
+	fmt.Println(float64(result), err)
 
 }
