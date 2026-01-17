@@ -2,26 +2,43 @@ package utils
 
 import "testing"
 
-// Write a proper unit test for Greet in greet_test.go.
-
-// The test must handle empty strings as input (return an error if empty).
-
-// Name the test correctly according to Go testing conventions.
-
-// Don’t use table tests — you know the rule from the course.
-
-// func Greet(name string) string {
-//     return "Hello " + name
-// }
-
-func TestGreet_EmptyInput(t *testing.T) {
-	greeting, err := Greet("")
-	if err == nil {
-		t.Errorf("expected error but got nil")
+// testGreet_ValidName
+func TestGreet(t *testing.T) {
+	name, err := Greet("kevin")
+	if err != nil {
+		t.Fatalf("unexpected error %v", err)
 	}
+	expected := "hello kevin"
 
-	if greeting != "" {
-		t.Fatalf("expected empty string but got %v", greeting)
+	if name != expected {
+		t.Fatalf("expected %v, got %v", expected, name)
 	}
 
 }
+
+// TestGreet_EmptyName
+
+func TestGreet_EmptyName(t *testing.T) {
+	result, err := Greet("")
+	if err == nil {
+		t.Fatalf("expected an error, got %v", err)
+	}
+
+	if result != "" {
+		t.Fatalf("expected empty string, got %v", result)
+	}
+}
+
+// Also write two test functions:
+
+// TestGreet_ValidName → checks that Greet("Kevin") returns "hello Kevin" and nil error
+
+// TestGreet_EmptyName → checks that Greet("") returns "" and the correct error
+
+// Rules:
+
+// Must check both return value and error
+
+// Test function names must be descriptive
+
+// Use errors.New() for errors

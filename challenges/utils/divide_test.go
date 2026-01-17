@@ -1,30 +1,31 @@
 package utils
 
-import "testing"
+import (
+	"testing"
+)
 
-//valid division
+func TestSafeDivide_ValidDivision(t *testing.T) {
+	result, err := SafeDivide(10, 2)
 
-func TestDivide_validDivision(t *testing.T) {
-	result, err := Divide(10, 4)
 	if err != nil {
-		t.Fatalf("unexpected error %v", err)
+		t.Fatalf("expected an error, got nil")
 	}
 
-	expected := 2.5
-
+	expected := 5
 	if result != expected {
-		t.Errorf("expected %v, got %v", expected, result)
-
+		t.Fatalf("expected %v, got %v", expected, result)
 	}
-
 }
 
-// division be Zero
-
-func TestDivide_DivisionByZero(t *testing.T) {
-	_, err := Divide(27, 0)
+// TestSafeDivide_DivideByZero
+func TestSafeDivide_DivideByZero(t *testing.T) {
+	result, err := SafeDivide(10, 0)
 	if err == nil {
-		t.Fatalf("expected error but did not get any error, got %v", err)
+		t.Fatalf("expected error %v but got ", err)
+	}
+	expected := 0
+	if result != expected {
+		t.Fatalf("expected %v, got %v", expected, result)
 	}
 
 }
