@@ -4,7 +4,7 @@ import "testing"
 
 // TestSafeDivide_ValidDivision → check SafeDivide(10, 2) returns 5 and nil error
 
-func TestSafeDivide_DivideByZero(t *testing.T) {
+func TestSafeDivide_ValidDivision(t *testing.T) {
 	result, err := SafeDivide(10, 2)
 	if err != nil {
 		t.Fatalf("unexpected error %v", err)

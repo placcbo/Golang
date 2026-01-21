@@ -27,21 +27,3 @@ func TestParseAge_InvalidInput(t *testing.T) {
 		t.Fatalf("got %v, expected %v", result, expected)
 	}
 }
-
-// Write two test functions:
-
-//
-
-// Rules:
-
-// Must check both return value and error
-
-// Test function names must be descriptive
-
-// Must use errors.New() for errors
-
-// 💀 Ruthless grading:
-
-// If you miss checking value or error → FAIL
-
-// If test function names are not descriptive → FAIL

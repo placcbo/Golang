@@ -1,12 +1,17 @@
 package main
 
-import (
-	"challenges/utils"
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	result, err := utils.SafeDivide(10, 4)
-	fmt.Println(float64(result), err)
+
+	type People struct {
+		name string
+		age  int
+	}
+	kevin := People{
+		name: "kevin",
+		age:  30,
+	}
+	fmt.Println(kevin)
 
 }
