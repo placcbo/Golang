@@ -1,29 +1,31 @@
 package week2
 
-func Grade(score int) string {
+import "errors"
+
+func Grade(score int) (string, error) {
 	if score < 0 || score > 100 {
-		return "invalid"
+		return "", errors.New("invalid score")
 	}
-
 	if a := score; a >= 90 && a <= 100 {
-		return "A"
+		return "A", nil
+	}
+	if score >= 70 && score <= 89 {
+		return "B", nil
 	}
 
-	if b := score; b >= 70 && b <= 89 {
-		return "B"
+	if score >= 50 && score <= 69 {
+		return "C", nil
 	}
 
-	if e := score; e >= 50 && e <= 69 {
-		return "C"
-	} else {
-		return "F"
-	}
+	return "F", nil
 
 }
 
-// func Grade(score int) string
+// func Grade(score int) (string, error)
 // Rules
-// If score < 0 or score > 100 → return "invalid"
+// If score < 0 or score > 100 → return "" and an error
+
+// Otherwise:
 
 // 90–100 → "A"
 
@@ -31,12 +33,12 @@ func Grade(score int) string {
 
 // 50–69 → "C"
 
-// Below 50 → "F"
+// < 50 → "F"
 
-// Requirements
+// Hard requirement
+// You must use an if with a short statement at least once.
 
-// Use if / else
+// Example usage (for your own thinking):
 
-// Use at least ONE short statement inside an if
-
-// Do NOT use switch
+// grade, err := Grade(85)
+// // grade = "B", err = nil
