@@ -16,7 +16,7 @@ Unit testing (testing package)
 
 1. Tell me about yourself
 
-I’m a backend Go developer focused on building reliable services with clean code, clear error handling, and strong unit tests. I enjoy turning simple programs into maintainable production systems.
+I’m a backend Go developer focused on building reliable services, writing clean unit-tested code, and understanding performance and concurrency. I enjoy turning simple programs into scalable systems.
 
 2. Why does Go use error returns instead of exceptions?
 
