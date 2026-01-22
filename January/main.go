@@ -1,18 +1,13 @@
 package main
 
 import (
-	"January/week1/utils"
+	"January/week2"
 	"fmt"
 )
 
 func main() {
 
-	result, err := utils.SafeDivide(10, -1)
+	results := week2.SumEven([]int{1, 3, 5})
+	fmt.Println(results)
 
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-
-	fmt.Println("result:", result)
 }

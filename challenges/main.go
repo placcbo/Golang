@@ -1,17 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"challenges/utils"
+	"fmt"
+)
 
 func main() {
 
-	type People struct {
-		name string
-		age  int
-	}
-	kevin := People{
-		name: "kevin",
-		age:  30,
-	}
-	fmt.Println(kevin)
+	result := utils.Grade(99)
+	fmt.Println(result)
 
 }
