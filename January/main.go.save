@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	a := map[int]string{
+		1: "kevin",
+		2: "kamau",
+		3: "ndirangu",
+	}
+	b := []int{11, 2, 3, 5, 4}
+	largestNum := b[0]
+	for _, x := range b {		if x > largestNum {
+			largestNum = x
+
+		}
+
+	}
+
+	fmt.Println(a[1])
+	fmt.Println(b[len(b)-1])
+	fmt.Println(largestNum)
+
+}
