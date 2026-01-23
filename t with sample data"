@@ -1,0 +1,63 @@
+[1mdiff --git a/January/main.go b/January/main.go[m
+[1mindex 7905807..5e63574 100644[m
+[1m--- a/January/main.go[m
+[1m+++ b/January/main.go[m
+[36m@@ -1,5 +1,13 @@[m
+ package main[m
+ [m
+[32m+[m[32mimport ([m
+[32m+[m	[32m"January/week2"[m
+[32m+[m	[32m"fmt"[m
+[32m+[m[32m)[m
+[32m+[m
+ func main() {[m
+ [m
+[32m+[m	[32mresult := week2.WordCount([]string{"kevin", "kamau", "ndirangu", "kevin"})[m
+[32m+[m	[32mfmt.Println(result)[m
+[32m+[m
+ }[m
+[1mdiff --git a/January/week2/WordCount.go b/January/week2/WordCount.go[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f512312[m
+[1m--- /dev/null[m
+[1m+++ b/January/week2/WordCount.go[m
+[36m@@ -0,0 +1,39 @@[m
+[32m+[m[32mpackage week2[m
+[32m+[m
+[32m+[m[32mfunc WordCount(words []string) map[string]int {[m
+[32m+[m	[32mcounts := make(map[string]int)[m
+[32m+[m	[32mfor _, word := range words {[m
+[32m+[m		[32mcounts[word]++[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m	[32mreturn counts[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m//  Write a function that counts how many times each word appears.[m
+[32m+[m
+[32m+[m[32m// Rules[m
+[32m+[m
+[32m+[m[32m// Use a map[string]int[m
+[32m+[m
+[32m+[m[32m// No external packages[m
+[32m+[m
+[32m+[m[32m// Case-sensitive[m
+[32m+[m
+[32m+[m[32m// Empty slice → empty map[m
+[32m+[m
+[32m+[m[32m// Function signature[m
+[32m+[m[32m// func WordCount(words []string) map[string]int[m
+[32m+[m
+[32m+[m[32m// Example[m
+[32m+[m[32m// input := []string{"go", "rust", "go", "go", "java"}[m
+[32m+[m[32m// output := map[string]int{[m
+[32m+[m[32m// 	"go":   3,[m
+[32m+[m[32m// 	"rust": 1,[m
+[32m+[m[32m// 	"java": 1,[m
+[32m+[m[32m// }[m
+[32m+[m
+[32m+[m[32m// Bonus constraints (optional but respected 😈)[m
+[32m+[m
+[32m+[m[32m// Do NOT check if the key exists explicitly[m
+[32m+[m
+[32m+[m[32m// Idiomatic Go only[m
