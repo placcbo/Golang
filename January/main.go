@@ -1,13 +1,16 @@
 package main
 
 import (
-	"January/week2"
+	"January/week3"
 	"fmt"
 )
 
 func main() {
-
-	result1 := week2.WordCount([]string{"go", "rust", "go", "go", "java"})
-	fmt.Println("Word Count Result:", result1)
-
+	r := week3.Wallet{
+		Owner:   "kevin ndirangu",
+		Balance: 23000,
+	}
+	result := r.Deposit(43000)
+	fmt.Println(r)
+	fmt.Println(result)
 }
