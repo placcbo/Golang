@@ -1,0 +1,72 @@
+[1mdiff --git a/January/week2/FirstDuplicate.go b/January/week2/FirstDuplicate.go[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git "a/t with sample data\"" "b/t with sample data\""[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7bbfab4[m
+[1m--- /dev/null[m
+[1m+++ "b/t with sample data\""[m	
+[36m@@ -0,0 +1,63 @@[m
+[32m+[m[32m[1mdiff --git a/January/main.go b/January/main.go[m[m
+[32m+[m[32m[1mindex 7905807..5e63574 100644[m[m
+[32m+[m[32m[1m--- a/January/main.go[m[m
+[32m+[m[32m[1m+++ b/January/main.go[m[m
+[32m+[m[32m[36m@@ -1,5 +1,13 @@[m[m
+[32m+[m[32m package main[m[m
+[32m+[m[32m [m[m
+[32m+[m[32m[32m+[m[32mimport ([m[m
+[32m+[m[32m[32m+[m	[32m"January/week2"[m[m
+[32m+[m[32m[32m+[m	[32m"fmt"[m[m
+[32m+[m[32m[32m+[m[32m)[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m func main() {[m[m
+[32m+[m[32m [m[m
+[32m+[m[32m[32m+[m	[32mresult := week2.WordCount([]string{"kevin", "kamau", "ndirangu", "kevin"})[m[m
+[32m+[m[32m[32m+[m	[32mfmt.Println(result)[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m }[m[m
+[32m+[m[32m[1mdiff --git a/January/week2/WordCount.go b/January/week2/WordCount.go[m[m
+[32m+[m[32m[1mnew file mode 100644[m[m
+[32m+[m[32m[1mindex 0000000..f512312[m[m
+[32m+[m[32m[1m--- /dev/null[m[m
+[32m+[m[32m[1m+++ b/January/week2/WordCount.go[m[m
+[32m+[m[32m[36m@@ -0,0 +1,39 @@[m[m
+[32m+[m[32m[32m+[m[32mpackage week2[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32mfunc WordCount(words []string) map[string]int {[m[m
+[32m+[m[32m[32m+[m	[32mcounts := make(map[string]int)[m[m
+[32m+[m[32m[32m+[m	[32mfor _, word := range words {[m[m
+[32m+[m[32m[32m+[m		[32mcounts[word]++[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m	[32m}[m[m
+[32m+[m[32m[32m+[m	[32mreturn counts[m[m
+[32m+[m[32m[32m+[m[32m}[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m//  Write a function that counts how many times each word appears.[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Rules[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Use a map[string]int[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// No external packages[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Case-sensitive[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Empty slice → empty map[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Function signature[m[m
+[32m+[m[32m[32m+[m[32m// func WordCount(words []string) map[string]int[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Example[m[m
+[32m+[m[32m[32m+[m[32m// input := []string{"go", "rust", "go", "go", "java"}[m[m
+[32m+[m[32m[32m+[m[32m// output := map[string]int{[m[m
+[32m+[m[32m[32m+[m[32m// 	"go":   3,[m[m
+[32m+[m[32m[32m+[m[32m// 	"rust": 1,[m[m
+[32m+[m[32m[32m+[m[32m// 	"java": 1,[m[m
+[32m+[m[32m[32m+[m[32m// }[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Bonus constraints (optional but respected 😈)[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Do NOT check if the key exists explicitly[m[m
+[32m+[m[32m[32m+[m[m
+[32m+[m[32m[32m+[m[32m// Idiomatic Go only[m[m
