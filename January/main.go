@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	result := week2.WordCount([]string{"kevin", "kamau", "ndirangu", "kevin"})
-	fmt.Println(result)
+	result1 := week2.WordCount([]string{"go", "rust", "go", "go", "java"})
+	fmt.Println("Word Count Result:", result1)
 
 }
