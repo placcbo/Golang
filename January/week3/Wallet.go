@@ -12,22 +12,16 @@ func (w Wallet) Deposit(amount int) Wallet {
 	}
 }
 
-// You’re building a tiny Wallet system.
+func (w Wallet) Withdraw(amount int) (Wallet, bool) {
 
-// Requirements
+	// Cannot withdraw, return original wallet
+	if amount > w.Balance {
+		return w, false
+	}
+	// Withdrawal possible, return new wallet
+	return Wallet{
+		Owner:   "kevin ndirangu",
+		Balance: w.Balance - amount,
+	}, true
 
-// Define a struct called Wallet with:
-
-// Owner (string)
-
-// Balance (int)
-
-// Add a method called Deposit that:
-
-// Takes an amount (int)
-
-// Returns a new Wallet
-
-// Increases the balance by amount
-
-// ❗️Do not modify the original Wallet
+}

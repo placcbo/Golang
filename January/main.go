@@ -1,7 +1,7 @@
 package main
 
 import (
-	"January/week3"
+	week3 "January/week3"
 	"fmt"
 )
 
@@ -10,7 +10,7 @@ func main() {
 		Owner:   "kevin ndirangu",
 		Balance: 23000,
 	}
-	result := r.Deposit(43000)
+	result, err := r.Withdraw(500)
 	fmt.Println(r)
-	fmt.Println(result)
+	fmt.Println(result, err)
 }
