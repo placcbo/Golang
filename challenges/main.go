@@ -1,27 +1,24 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
-func main() {
-
-	fmt.Println(IsTeen(15))
-
+type Task struct {
+	ID    int    `json: "id`
+	Title string `json:"title"`
+	Done  bool   `json:"done"`
 }
 
-// Question 2 — Sum of Even Numbers
+func main() {
+	t := Task{
+		ID:    1,
+		Title: "Buy milk",
+		Done:  false,
+	}
+	// struct ➡️ json
+	data, _ := json.Marshal(t)
+	fmt.Println(data)
 
-// Write a function SumEven(nums []int) int that:
-
-// Takes a slice of ints
-
-// Returns the sum of all even numbers in the slice
-
-// Use a for range loop
-
-// Example:
-
-// SumEven([]int{1,2,3,4,5,6}) // 2 + 4 + 6 = 12
-
-// Write it.
+}
