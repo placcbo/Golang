@@ -2,12 +2,19 @@ package main
 
 import (
 	"fmt"
+
+	"time"
 )
 
-func sayHello() {
-	fmt.Println("Hello nigga")
+func main() {
+	sendEmail("kevn")
+	fmt.Scanln()
+
 }
 
-func main() {
-
+func sendEmail(email string) {
+	func() {
+		time.Sleep(10 * time.Second)
+		fmt.Printf("hello %s ", email)
+	}()
 }
